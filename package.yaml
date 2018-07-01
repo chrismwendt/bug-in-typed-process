@@ -2,6 +2,9 @@ name: app
 version: 0.1.0.0
 dependencies:
   - base
+  - process
+  - typed-process
+  - bytestring
 executables:
   app:
     source-dirs: src
