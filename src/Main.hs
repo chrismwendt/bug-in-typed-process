@@ -2,11 +2,12 @@ import qualified System.Process as P
 import qualified System.Process.Typed as T
 import qualified Data.ByteString.Lazy as BL
 
--- Run: stack runghc bug.hs
--- Notice the process finishes.
+-- `stack ghci`
+-- > main
+-- *The process finishes*
 --
--- Then run: stack ghc bug.hs ; ./bug
--- The process hangs!
+-- `stack build ; stack exec app`
+-- *The process hangs!*
 
 main = do
   putStrLn "System.Process with 10k works:"
