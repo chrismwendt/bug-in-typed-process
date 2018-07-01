@@ -2,13 +2,6 @@ import qualified System.Process as P
 import qualified System.Process.Typed as T
 import qualified Data.ByteString.Lazy as BL
 
--- `stack ghci`
--- > main
--- *The process finishes*
---
--- `stack build ; stack exec app`
--- *The process hangs!*
-
 main = do
   putStrLn "System.Process with 10k works:"
   P.readCreateProcess (P.shell "sh -c \"yes | head -c 10000\"") "" >>= print . length
